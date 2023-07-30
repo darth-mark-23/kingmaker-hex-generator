@@ -1,0 +1,253 @@
+# Title: Hex Attributes
+# Description: This file is used to calculate the bonuses of a hex based on its attributes.
+#   The bonuses modify the base number of farms,
+#   fisheries, mines, and logging camps which can be built in a hex.
+
+Feature Types:
+  Altitude:
+    Default: 'Mid Level'
+    Variable: false
+    Features:
+      Trench:
+        Bonuses:
+          Farms: NA
+          Fisheries: -1
+          Logging: -3
+      Deep:
+        Bonuses:
+          Farms: NA
+          Fisheries: -1
+          Logging: -2
+      Shallows:
+        Bonuses:
+          Farms: 1
+          Fisheries: 1
+          Logging: -1
+      Sea Level:
+        Bonuses:
+          Farms: 1
+          Fisheries: 2
+      Mid Level:
+        Bonuses:
+      High Level:
+        Bonuses:
+          Farms: -1
+          Logging: -1
+      Extreme:
+        Bonuses:
+          Farms: -4
+          Logging: -2
+  Slope:
+    Default: 'Mild Slope'
+    Variable: true
+    Features:
+      Flat:
+        Bonuses:
+          Farms: 1
+          Mines: -2
+          Road Cost: 1
+      Mild Slope:
+        Bonuses:
+          Farms: 0
+          Mines: 1
+          Exploration Time: 1
+          Road Cost: 2
+      Steep Slope:
+        Bonuses:
+          Farms: -1
+          Mines: 1
+          Exploration Time: 2
+          Clear: 1
+          Road Cost: 4
+      Extreme Slope:
+        Bonuses:
+          Farms: -2
+          Mines: 2
+          Exploration Time: 4
+          Clear: 4
+          Road Cost: 16
+      Impassable:
+        Bonuses:
+          Farms: -6
+          Mines: 3
+          Exploration Time: 8
+          Clear: 8
+          Road Cost: 32
+  Climate:
+    Default: 'Continental'
+    Variable: false
+    Features:
+      Tropical:
+        Bonuses:
+          Farms: 4
+          Logging: 3
+          Road Cost: 2
+      Subtropical:
+        Bonuses:
+          Farms: 4
+          Logging: 2
+          Road Cost: 1
+      Mediterranean:
+        Bonuses:
+          Farms: 3
+          Logging: 1
+      Continental:
+        Bonuses:
+      Subarctic:
+        Bonuses:
+          Farms: -1
+          Logging: -1
+      Arctic:
+        Bonuses:
+          Farms: -3
+          Logging: -4
+          Road Cost: 1
+      Tundra:
+        Bonuses:
+          Farms: -5
+          Logging: -5
+          Road Cost: 4
+      Ice Cap:
+        Bonuses:
+          Farms: -6
+          Fisheries: NA
+          Logging: -6
+          Road Cost: 1
+  Humidity:
+    Default: 'Wet'
+    Variable: true
+    Features:
+      Dessicated:
+        Bonuses:
+          Farms: -5
+          Logging: -4
+      Desert:
+        Bonuses:
+          Farms: -4
+          Logging: -2
+      Arid:
+        Bonuses:
+          Farms: -3
+          Logging: -1
+      Semi Arid:
+        Bonuses:
+          Farms: -1
+      Moderate:
+        Bonuses:
+      Wet:
+        Bonuses:
+          Farms: 1
+          Logging: 1
+          Road Cost: 1
+      Torrential:
+        Bonuses:
+          Farms: 1
+          Logging: 1
+          Road Cost: 2
+  Topsoil:
+    Default: 'Standard'
+    Variable: true
+    Features:
+      Water:
+        Bonuses:
+          Farms: 2
+          Logging: 2
+          Road Cost: 4
+      Ash:
+        Bonuses:
+          Farms: -3
+          Logging: -2
+      Dust:
+        Bonuses:
+          Farms: -2
+          Logging: -1
+      Sand:
+        Bonuses:
+          Farms: -1
+      Standard:
+        Bonuses:
+      Stony:
+        Bonuses:
+          Farms: -1
+          Clear: 1
+          Road Cost: 1
+      Rocky:
+        Bonuses:
+          Farms: -2
+          Mines: 1
+          Clear: 2
+          Road Cost: 2
+      Bare Rock:
+        Bonuses:
+          Farms: -3
+          Mines: 2
+          Logging: -2
+          Clear: 4
+          Road Cost: 2
+  Vegetation/Flora:
+    Default: 'Heavy Forest'
+    Variable: true
+    Features:
+      None:
+        Bonuses:
+          Farms: NA
+          Exploration Time: -3
+      Sparse Grassland:
+        Bonuses:
+          Farms: 0
+          Exploration Time: -2
+      Grassland:
+        Bonuses:
+          Farms: -1
+          Exploration Time: -1
+      Scrub:
+        Bonuses:
+      Light Forest:
+        Bonuses:
+          Logging: 1
+          Exploration Time: 1
+          Clear: 1
+          Road Cost: 1
+      Medium Forest:
+        Bonuses:
+          Farms: -1
+          Logging: 2
+          Exploration Time: 2
+          Clear: 2
+          Road Cost: 2
+      Heavy Forest:
+        Bonuses:
+          Farms: -1
+          Logging: 3
+          Exploration Time: 3
+          Clear: 4
+          Road Cost: 4
+      Ancient Forest:
+        Bonuses:
+          Farms: -1
+          Logging: 4
+          Exploration Time: 8
+          Clear: 8
+          Road Cost: 4
+  Fauna:
+    Default: 'Very Common'
+    Variable: true
+    Features:
+      None:
+        Bonuses:
+          Farms: -1
+          Logging: -1
+      Sparse:
+        Bonuses:
+          Farms: -1
+      Common:
+        Bonuses:
+      Very Common:
+        Bonuses:
+          Farms: 1
+      Overrun:
+        Bonuses:
+          Farms: -1
+          Fishing: 1
+          Clear: 1
+          Road Cost: 1
